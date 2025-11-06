@@ -17,6 +17,7 @@ import Footer from './Footer'
 import { FcAbout } from 'react-icons/fc'
 import Contact from './Contact'
 const Sidebar = () => {
+   
    const location = useLocation();
     const userName = location.state?.username || 'Guest';
   const scrollToAbout = (e) => {
@@ -42,6 +43,9 @@ const Sidebar = () => {
     if (ct) ct.scrollIntoView({ behavior: 'smooth', block: 'start'})
 
   }
+   window.scrollTo({ top: 0, behavior: 'smooth' });
+
+
 
   return (
     <section>
@@ -76,7 +80,10 @@ const Sidebar = () => {
      </ul>
 
      <ul className='mt-20 cursor-pointer text-white flex flex-col gap-3'>
-        <li> <BiHome size={30}/></li>
+        <li>
+          <button 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth'})}
+          className='focus:outline-none'> <BiHome size={30}/> </button> </li>
           <li className='relative group'>
             <button onClick={scrollToAbout} aria-label="Scroll to About" className="focus:outline-none">
               <FcAbout size={30}/>

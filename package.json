@@ -1,6 +1,6 @@
-{
+{ 
   "name": "portfolio",
-  "homepage": "t https://sturdyme.github.io/Reactportfolio/",
+  "homepage": "https://sturdyme.github.io/Reactportfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",

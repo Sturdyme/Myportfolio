@@ -83,7 +83,7 @@ const Resume = () => {
         <h2 className="text-2xl font-semibold text-blue-600 mb-3">Work Experience</h2>
         <div className="mb-5">
           <h3 className="text-lg font-bold text-gray-900">
-            Full Stack Developer – ABC Tech Solutions
+            Full Stack Developer – Appclick Tech Solutions
           </h3>
           <p className="text-sm text-gray-500">Jan 2022 – Present</p>
           <ul className="list-disc ml-6 text-gray-700">

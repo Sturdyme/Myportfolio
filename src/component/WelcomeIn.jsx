@@ -14,7 +14,7 @@ const handleLogin = async (e) => {
   navigate('/Sidebar', { state: { username: name } });
   e.preventDefault();
   setLoading(true);
-  await new Promise(resolve => setTimeout(resolve, 2000));
+  await new Promise(resolve => setTimeout(resolve, 5000));
   setLoading(false);
 };
 
