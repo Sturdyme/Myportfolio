@@ -5,7 +5,7 @@ import { GiSkills, GiWorld } from 'react-icons/gi'
 import { BiHome, BiMailSend } from 'react-icons/bi'
 import { GoProject } from 'react-icons/go'
 import { LuChevronsLeftRightEllipsis } from 'react-icons/lu'
-import { BsFacebook, BsGithub, BsInstagram, BsLinkedin, BsTwitterX } from 'react-icons/bs'
+import { BsFacebook, BsGithub, BsInstagram, BsLinkedin, BsTwitterX, BsWhatsapp } from 'react-icons/bs'
 import emmy from '../assets/emmy.png'
 import { Typewriter } from 'react-simple-typewriter'
 import background from '../assets/background.png'
@@ -116,7 +116,7 @@ const Sidebar = () => {
         <li><a href='https://x.com/cash_o_u_t?s=21' 
         target='blank'><BsTwitterX size={25}/> </a></li>
       <li> <a href='https://www.linkedin.com/in/sturdy-me-433aab322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' target='blank'> <BsLinkedin size={25}/></a></li>
-        <li> <a> <BsFacebook size={25}/> </a> </li>
+        <li> <a href='https://wa.link/dcpgi4'> <BsWhatsapp size={25}/> </a> </li>
         <li> <a> <BsInstagram size={25}/> </a> </li>
         <li><a href='https://github.com/Sturdyme' target='blank'> <BsGithub size={25}/></a></li>
      </ul>

@@ -20,42 +20,44 @@ const handleLogin = async (e) => {
 
 
   return (
-   <section className="h-screen p-10 bg-cover bg-center"
+   <section className="h-screen p-4 sm:p-6 md:p-10 lg:p-16 bg-cover bg-center"
       style={{ backgroundImage: `url(${background})` }}
     >
-<div className="flex justify-center gap-5">
-  <h1 className="bg-gradient-to-l from-red-600 to-red-800 bg-clip-text text-transparent text-3xl  py-14 font-serif overflow-hidden text-center whitespace-nowrap animate-typing">
-🚀 Welcome to my portfolio.🚀  <br/> <span className="bg-gradient-to-l from-blue-400 to-blue-600 bg-clip-text text-transparent">
+<div className="flex justify-center items-center px-2 sm:px-4 md:px-6 lg:px-10 text-center">
+  <h1 className="bg-gradient-to-l from-red-600 to-red-800 bg-clip-text text-transparent
+      text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl
+      py-4 sm:py-6 md:py-10 lg:py-14 font-serif overflow-hidden
+      whitespace-normal leading-relaxed">
+🚀 Welcome to my portfolio.🚀  <br/> <span className="font-bold text-blue-700 dark:text-blue-400">
   I’m Omowaye Emmanuel. Crafting modern web experiences as Sturdyme.
 </span>
 
   </h1>
 </div>
 
-<div className='flex justify-between items-center p-16'> 
+<div className='lex flex-col-reverse md:flex-row justify-between items-center gap-6 sm:gap-8 md:gap-10 lg:gap-16 mt-6 sm:mt-10 md:mt-14'> 
     <div> 
     <label className='flex flex-col gap-2'> 
         <h1 className='text-white text-2xl font-extralight'>Enter your name:</h1>
-        <input type='text' 
-        placeholder='Enter your name'
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-         className="w-[600px] h-[50px] border border-gray-400 rounded px-4 py-1"/>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="w-full md:w-[500px] lg:w-[600px] h-[40px] sm:h-[45px] md:h-[50px] border border-gray-400 rounded px-3 sm:px-4 py-2 text-sm sm:text-base md:text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+        />
     </label>
       <button
-        className='p-3 text-white bg-blue-400 w-36 rounded-lg mt-2 flex items-center justify-center hover:bg-red-900 transition-colors duration-1000 ease-in-out'
+        className="p-2 sm:p-3 md:p-3 lg:p-4 text-white bg-blue-400 w-full sm:w-36 md:w-40 lg:w-44 rounded-lg mt-3 flex items-center justify-center hover:bg-red-900 transition-colors duration-700 ease-in-out text-sm sm:text-base md:text-lg"
         onClick={handleLogin}
         disabled={loading}
       >
-        {loading ? <Spinner /> : "submit"}
+        {loading ? <Spinner loading="lazy" /> : "Submit"}
       </button>
     
 </div>
 
- <> 
-    <img src={welcomepic}
-    className='w-80 h-80 rounded-lg hover:animate-shake'/>
-    </>
+ 
 </div>
  
 </section>

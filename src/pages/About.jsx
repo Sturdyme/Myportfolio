@@ -151,21 +151,20 @@ const About = () => {
   data-aos="fade-up"
   data-aos-duration="800"
   className="
-    w-[90%] sm:w-[85%] md:w-[90%] 
-    max-w-md sm:max-w-3xl md:max-w-4xl
-    mx-auto
-    grid grid-cols-1 sm:grid-cols-3
-    gap-6 sm:gap-8 md:gap-12
-    mt-6 md:mt-12
-    max-sm:ml-24
-    bg-gradient-to-r from-blue-900/30 via-indigo-900/30 to-blue-900/30
-    backdrop-blur-md rounded-2xl
-    px-4 sm:px-6 md:px-10 
-    py-6 sm:py-8 md:py-14
-    md:ml-20 sm:ml-20 lg:ml-56
-    
-    border border-blue-800/40
-    shadow-lg shadow-blue-900/40
+      w-[90%] sm:w-[85%] md:w-[90%]
+  max-w-md sm:max-w-3xl md:max-w-4xl
+  mx-auto
+  grid grid-cols-1 sm:grid-cols-3
+  gap-6 sm:gap-8 md:gap-12
+  mt-6 md:mt-12
+  max-sm:ml-14
+  bg-gradient-to-r from-blue-900/30 via-indigo-900/30 to-blue-900/30
+  backdrop-blur-md rounded-2xl
+  px-4 sm:px-6 md:px-10
+  py-6 sm:py-8 md:py-14
+  md:ml-20 sm:ml-20 lg:ml-auto lg:mr-auto
+  border border-blue-800/40
+  shadow-lg shadow-blue-900/40
   
   "
 >
@@ -262,13 +261,18 @@ const About = () => {
   <div
     data-aos="fade-up"
     data-aos-duration="800"
-    className="relative text-center max-w-2xl mx-auto mt-12 p-8 max-md:w-96 rounded-2xl bg-gradient-to-br
-     from-blue-900/30 via-indigo-900/30 to-blue-900/30 backdrop-blur-lg border border-blue-800/40 
-     shadow-[0_0_30px_rgba(59,130,246,0.25)] text-gray-300
-      sm: px-8 sm:py-10
+    className=" relative 
+    text-center
+     max-w-2xl mx-auto max-md:w-96
+     mt-12 p-8 rounded-2xl
+     bg-gradient-to-br from-blue-900/30
+      via-indigo-900/30 to-blue-900/30 
+      backdrop-blur-lg border border-blue-800/40 
+      shadow-[0_0_30px_rgba(59,130,246,0.25)]
+       text-gray-300 
+       sm: px-8 sm:py-10
        max-sm:w-80
-         max-sm:px-4 max-sm:py-6
-         max-sm:text-xs"
+       max-sm:text-xs"
        
   >
 
