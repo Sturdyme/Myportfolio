@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import welcomepic from '../assets/welcomepic.png'
 import background from '../assets/background.png'
 import Spinner from './utilities/Spinner';
 import { useNavigate } from 'react-router-dom';
@@ -10,12 +9,18 @@ const WelcomeIn = () => {
   const navigate = useNavigate();
 
 const handleLogin = async (e) => {
-  if (name.trim() === '') return alert('Please enter your name');
-  navigate('/Sidebar', { state: { username: name } });
   e.preventDefault();
+
+  if (name.trim() === '') {
+   alert('Please enter your name before submitting.')
+  }
+
   setLoading(true);
-  await new Promise(resolve => setTimeout(resolve, 5000));
-  setLoading(false);
+  
+  await new Promise(resolve => setTimeout(resolve, 8000));
+   setLoading(false);
+  navigate('/Sidebar', { state: { username: name } });
+
 };
 
 
