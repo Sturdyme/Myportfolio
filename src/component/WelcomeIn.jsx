@@ -54,7 +54,23 @@ const handleLogin = async (e) => {
           placeholder="Enter your name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full md:max-w-[650px] lg:w-[600px]  sm:max-w-[500px] sm:items-center   max-w-[350px] h-[40px] sm:h-[45px] md:h-[50px]  border border-gray-400 rounded px-3 sm:px-4 py-2 text-sm sm:text-base md:text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+          className="  w-full
+    max-w-[350px]
+    sm:max-w-[500px]
+    md:max-w-[650px]
+    h-[40px]
+    sm:h-[45px]
+    md:h-[50px]
+    border border-gray-400
+    rounded
+    px-3 sm:px-4
+    py-2
+    text-base md:text-lg
+    focus:outline-none
+    focus:ring-2
+    focus:ring-blue-500
+    transition-all
+    duration-300"
         />
     </label>
       <button
