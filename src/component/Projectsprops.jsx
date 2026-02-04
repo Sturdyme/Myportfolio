@@ -10,6 +10,7 @@ const Projectsprops = ({ projects }) => {
           title={project.title}
           description={project.description}
           image={project.image}
+          demoLink={project.demoLink}
         />
       ))}
     </div>

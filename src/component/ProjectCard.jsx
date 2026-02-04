@@ -5,7 +5,7 @@ import { FaChartLine, FaGithub } from 'react-icons/fa'
 import { MdOutlineShowChart } from 'react-icons/md'
 import { BsStarFill } from 'react-icons/bs'
 
-const ProjectCard = ({ title, description, image }) => {
+const ProjectCard = ({ title, description, image, demoLink }) => {
 
   return (
    <article className="bg-[#0F172A] border border-blue-900/30 rounded-2xl shadow-xl overflow-hidden 
@@ -64,7 +64,7 @@ flex flex-col justify-between max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl  mx-a
 
     {/* Buttons */}
     <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4">
-      <a href='https://travelsandtourvoyage.com/'
+      <a href={demoLink}
       target='_blank'
       rel='noopener noreferrer'> 
       <button className="group w-full sm:w-auto flex justify-center items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold transition-all duration-300 hover:from-indigo-500 hover:to-blue-500">
