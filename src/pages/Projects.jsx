@@ -11,7 +11,7 @@ import screenshot6 from '../assets/screenshot1.png';
 const Projects = () => {
 
   const allProjects = [
-    { id: 1, title: 'Voyager Flight Booking App', image: screenshot1, description: 'Flight booking app using Firebase.', demoLink: 'https://voyagetraveltour.com' },
+    { id: 1, title: 'Voyager Flight Booking App', image: screenshot1, description: 'Flight booking app using Firebase.', demoLink: 'https://travelsandtourvoyage.com' },
     { id: 2, title: 'YossyVogue Ecom Store', image: screenshot2, description: 'E-commerce platform built with React + Node.js.', demoLink: 'https://ecommercestore-nu-three.vercel.app/' },
     { id: 3, title: 'DNK Shopping Store', image: screenshot3, description: 'Dynamic MERN stack store.' },
     { id: 4, title: 'TaskMaster App', image: screenshot4, description: 'Next.js task manager with MongoDB.' },
