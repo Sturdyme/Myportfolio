@@ -96,7 +96,7 @@ const Resume = () => {
         </div>
         <div>
           <h3 className="text-lg font-bold text-gray-900">
-            Frontend Developer Intern – XYZ Innovations
+            Frontend Developer Intern at Parach ICT
           </h3>
           <p className="text-sm text-gray-500">Jun 2021 – Dec 2021</p>
           <ul className="list-disc ml-6 text-gray-700">

@@ -5,7 +5,6 @@ import Sidebar from '../pages/Sidebar'
 const Home = () => {
   return (
     <div>
-      {/* <WelcomeIn/> */}
      <Sidebar/>
     </div>
   )

@@ -21,10 +21,12 @@ const handleLogin = async (e) => {
   }
 
   setLoading(true);
-  
+
+  // Save the name to localStorage
+  localStorage.setItem('portfolio-username', name);
   await new Promise(resolve => setTimeout(resolve, 8000));
    setLoading(false);
-  navigate('/Sidebar', { state: { username: name } });
+  navigate('/home');
 
 };
 

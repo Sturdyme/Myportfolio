@@ -18,8 +18,8 @@ import { FcAbout } from 'react-icons/fc'
 import Contact from './Contact'
 const Sidebar = () => {
    
-   const location = useLocation();
-    const userName = location.state?.username || 'Guest';
+  const location = useLocation();
+  const userName = localStorage.getItem('portfolio-username') || 'Guest';
   const scrollToAbout = (e) => {
     e.preventDefault()
     const el = document.getElementById('about')
@@ -169,10 +169,11 @@ const Sidebar = () => {
 
       {/* Buttons */}
       <div className="flex flex-wrap gap-4 sm:gap-6 mt-10 sm:mt-14 md:mt-20">
-        <Link to="/resume" target="_blank">
-          <button className="p-2 sm:p-3 md:p-4 w-28 sm:w-32 md:w-36 bg-blue-900 text-white font-semibold rounded-lg transition-colors duration-500 hover:bg-teal-800">
-            My Resume
-          </button>
+        <Link 
+          to="/resume" target='blank'
+          className="p-2 sm:p-3 md:p-4 w-28 sm:w-32 md:w-36 bg-blue-900 text-white font-semibold rounded-lg transition-colors duration-500 hover:bg-teal-800 flex items-center justify-center"
+        >
+          My Resume
         </Link>
 
         <button
