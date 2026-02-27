@@ -151,13 +151,13 @@ const About = () => {
   data-aos="fade-up"
   data-aos-duration="800"
   className="
-      w-[90%] max-sm:w-[65%] md:w-[90%]
+      w-[90%] max-sm:w-[70%] md:w-[90%]
   max-w-md sm:max-w-3xl md:max-w-4xl
   mx-auto
   grid grid-cols-1 sm:grid-cols-3
   gap-6 sm:gap-8 md:gap-12
   mt-6 md:mt-12
-  max-sm:ml-28
+  max-sm:ml-24
   bg-gradient-to-r from-blue-900/30 via-indigo-900/30 to-blue-900/30
   backdrop-blur-md rounded-2xl
   px-4 sm:px-6 md:px-10
