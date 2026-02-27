@@ -1,96 +1,116 @@
-import React, { useState } from 'react'
-import background from '../assets/background.png'
-import Spinner from './utilities/Spinner';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import background from "../assets/background.png";
+import Spinner from "./utilities/Spinner";
+import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const WelcomeIn = () => {
-  const [loading, setLoading] = useState  (false);
-  const [ name, setName] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [name, setName] = useState("");
   const navigate = useNavigate();
 
-const handleLogin = async (e) => {
-  e.preventDefault();
+  const handleLogin = async (e) => {
+    e.preventDefault();
 
-  if (name.trim() === '') {
-    alert('Please enter your name before submitting');
-    return;
-  }
+    if (name.trim() === "") {
+      alert("Please enter your name before submitting.");
+      return;
+    }
 
-  if (name.trim() === '') {
-   alert('Please enter your name before submitting.')
-  }
+    setLoading(true);
 
-  setLoading(true);
+    localStorage.setItem("portfolio-username", name);
 
-  // Save the name to localStorage
-  localStorage.setItem('portfolio-username', name);
-  await new Promise(resolve => setTimeout(resolve, 8000));
-   setLoading(false);
-  navigate('/home');
+    // Better UX (shorter delay)
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
-};
+    setLoading(false);
+    navigate("/home");
+  };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
 
   return (
-   <section className="h-screen p-4 sm:p-6 md:p-10 lg:p-16 bg-cover bg-center"
-      style={{ backgroundImage: `url(${background})` }}
+    <section
+      className="min-h-screen flex flex-col justify-center items-center
+      bg-gradient-to-br from-indigo-900 via-purple-900 to-black
+      relative overflow-hidden"
     >
-<div className="flex justify-center items-center px-2 sm:px-4 md:px-6 lg:px-10 text-center">
-  <h1 className="bg-gradient-to-l from-red-600 to-red-800 bg-clip-text text-transparent
-      text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl
-      py-4 sm:py-6 md:py-10 lg:py-14 font-serif overflow-hidden
-      whitespace-normal leading-relaxed">
-🚀 Welcome to my portfolio.🚀  <br/> <span className="font-bold text-blue-700 dark:text-blue-400">
-  I’m Omowaye Emmanuel. Crafting modern web experiences as Sturdyme.
-</span>
+      {/* Optional background image overlay */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-20"
+        style={{ backgroundImage: `url(${background})` }}
+      />
 
-  </h1>
-</div>
+      {/* Content Wrapper */}
+      <div className="relative z-10 w-full max-w-4xl px-6 text-center">
 
-<div className='lex flex-col-reverse md:flex-row justify-between items-center gap-6 sm:gap-8 md:gap-10 lg:gap-16 mt-6 sm:mt-10 md:mt-14'> 
-    <div> 
-    <label className='flex flex-col gap-2'> 
-        <h1 className='text-white text-2xl font-extralight'>Enter your name:</h1>
-        <input
-          type="text"
-          placeholder="Enter your name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="  w-full
-    max-w-[350px]
-    sm:max-w-[500px]
-    md:max-w-[650px]
-    h-[40px]
-    sm:h-[45px]
-    md:h-[50px]
-    border border-gray-400
-    rounded
-    px-3 sm:px-4
-    py-2
-    text-base md:text-lg
-    focus:outline-none
-    focus:ring-2
-    focus:ring-blue-500
-    transition-all
-    duration-300"
-        />
-    </label>
-      <button
-        className="p-2 sm:p-3 max-w-[150px] md:p-3 lg:p-4 text-white bg-blue-400 w-full sm:w-36 md:w-40 lg:w-44 rounded-lg mt-3 flex items-center justify-center hover:bg-red-900 transition-colors duration-700 ease-in-out text-sm sm:text-base md:text-lg"
-        onClick={handleLogin}
-        disabled={loading}
-      >
-        {loading ? <Spinner loading="lazy" /> : "Submit"}
-      </button>
-    
-</div>
+        {/* Heading */}
+        <div data-aos="fade-down">
+          <h1
+            className="bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400
+            bg-clip-text text-transparent
+            text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+            font-bold leading-snug"
+          >
+            🚀 Welcome to my portfolio
+          </h1>
 
- 
-</div>
- 
-</section>
+          <p className="mt-4 text-gray-300 text-lg sm:text-xl">
+            I’m <span className="font-semibold text-white">Omowaye Emmanuel</span>,
+            crafting modern web experiences as{" "}
+            <span className="text-purple-400 font-semibold">Sturdyme</span>.
+          </p>
+        </div>
 
-  )
-}
+        {/* Glass Card */}
+        <div
+          data-aos="zoom-in"
+          className="mt-12 bg-white/10 backdrop-blur-xl
+          border border-white/20
+          p-8 rounded-2xl shadow-2xl"
+        >
+          <label className="flex flex-col gap-3 text-left">
+            <span className="text-gray-200 text-lg">
+              Enter your name:
+            </span>
 
-export default WelcomeIn
+            <input
+              type="text"
+              placeholder="Your name..."
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full h-12 rounded-lg px-4
+              bg-white/20 text-white placeholder-gray-300
+              border border-white/30
+              focus:outline-none focus:ring-2 focus:ring-purple-500
+              transition-all duration-300"
+            />
+          </label>
+
+          <button
+            onClick={handleLogin}
+            disabled={loading}
+            className="mt-6 w-full h-12 rounded-lg
+            bg-gradient-to-r from-purple-600 to-pink-600
+            hover:scale-105 hover:shadow-xl
+            transition-all duration-300
+            text-white font-semibold
+            flex items-center justify-center"
+          >
+            {loading ? <Spinner /> : "Enter Portfolio"}
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default WelcomeIn;
