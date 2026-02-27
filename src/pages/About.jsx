@@ -165,7 +165,6 @@ const About = () => {
   md:ml-20 sm:ml-20 lg:ml-auto lg:mr-auto
   border border-blue-800/40
   shadow-lg shadow-blue-900/40
-  
   "
 >
   <div className="flex flex-col items-center space-y-3 md:space-y-4">
