@@ -4,6 +4,7 @@ import WelcomeIn from './component/WelcomeIn';
 import Home from './component/Home';
 import Resume from './pages/Resume';
 
+
 function App() {
   return (
     <Routes>
@@ -15,6 +16,7 @@ function App() {
 
       {/* Route for the resume page */}
       <Route path="/resume" element={<Resume />} />
+
     </Routes>
   );
 }

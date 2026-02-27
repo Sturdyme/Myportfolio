@@ -16,6 +16,8 @@ import Projects from './Projects'
 import Footer from './Footer'
 import { FcAbout } from 'react-icons/fc'
 import Contact from './Contact'
+import Pdf from '../assets/certificate.pdf'
+
 const Sidebar = () => {
    
   const location = useLocation();
@@ -176,6 +178,14 @@ const Sidebar = () => {
           My Resume
         </Link>
 
+        <a 
+          href={Pdf}
+          target='_blank'
+          className="p-2 sm:p-3 md:p-4 w-28 sm:w-32 md:w-36 bg-blue-900 text-white font-semibold rounded-lg transition-colors duration-500 hover:bg-teal-800 flex items-center justify-center"
+        >
+         Certificate
+        </a>
+         
         <button
           onClick={() =>
             (window.location = "mailto:emmanuel08135672350@gmail.com")
