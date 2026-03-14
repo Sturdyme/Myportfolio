@@ -5,7 +5,7 @@ import { FaChartLine, FaGithub } from 'react-icons/fa'
 import { MdOutlineShowChart } from 'react-icons/md'
 import { BsStarFill } from 'react-icons/bs'
 
-const ProjectCard = ({ title, description, image, demoLink }) => {
+const ProjectCard = ({ title, description, image, demoLink, techStack, progress}) => {
 
   return (
    <article className="bg-[#0F172A] border border-blue-900/30 rounded-2xl shadow-xl overflow-hidden 
@@ -50,15 +50,16 @@ flex flex-col justify-between max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl  mx-a
         <p className="text-white text-sm sm:text-base">Tech Stack</p>
         <span className="text-[10px] sm:text-xs text-blue-400 bg-blue-800 rounded-full px-2 py-1 flex items-center gap-1.5">
           <FaChartLine className="text-blue-400" />
-          In Progress
+         {progress}
         </span>
       </div>
 
       <ul className="flex flex-wrap gap-2 text-[10px] sm:text-xs text-blue-400 mt-4">
-        <li className="bg-blue-800 px-2 py-1 sm:px-3 sm:py-1.5 rounded-md">TypeScript</li>
-        <li className="bg-blue-800 px-2 py-1 sm:px-3 sm:py-1.5 rounded-md">Node.js</li>
-        <li className="bg-blue-800 px-2 py-1 sm:px-3 sm:py-1.5 rounded-md">React</li>
-        <li className="bg-blue-800 px-2 py-1 sm:px-3 sm:py-1.5 rounded-md">Tailwind CSS</li>
+       {techStack.map((tech, index) => (
+        <li key={index}
+        className='bg-blue-800 px-2 py-1 sm:px-3 sm:py-1.5 rounded-md'> {tech}</li>
+       ))}
+       
       </ul>
     </div>
 

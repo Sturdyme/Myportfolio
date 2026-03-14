@@ -11,9 +11,9 @@ import screenshot6 from '../assets/screenshot1.png';
 const Projects = () => {
 
   const allProjects = [
-    { id: 1, title: 'Voyager Flight Booking App', image: screenshot1, description: 'Flight booking app using Firebase.', demoLink: 'https://travelsandtourvoyage.com' },
-    { id: 2, title: 'YossyVogue Ecom Store', image: screenshot2, description: 'E-commerce platform built with React + Node.js.', demoLink: 'https://ecommercestore-nu-three.vercel.app/' },
-    { id: 3, title: 'DNK Shopping Store', image: screenshot3, description: 'Dynamic MERN stack store.' },
+    { id: 1, title: 'Voyager Flight Booking App', image: screenshot1, description: 'Flight booking app using Firebase.', demoLink: 'https://travelsandtourvoyage.com'},
+    { id: 2, title: 'YossyVogue Ecom Store', image: screenshot2, description: 'E-commerce platform built with React + Node.js.', demoLink: '' },
+    { id: 3, title: 'DWell Application Form', image: screenshot3, description: 'Home Care Service Application Form', demoLink: 'https://application-form-frontend.onrender.com/' },
     { id: 4, title: 'TaskMaster App', image: screenshot4, description: 'Next.js task manager with MongoDB.' },
     { id: 5, title: 'FitLife Tracker', image: screenshot5, description: 'Workout data tracker using Chart.js.' },
     { id: 6, title: 'CryptoDashboard', image: screenshot6, description: 'Real-time cryptocurrency tracker.' },
@@ -48,7 +48,7 @@ const handlePageClick = (num) => setCurrentPage(num);
   {/* Section Header */}
   <div className="mb-10 text-center">
     <h1 className="text-3xl sm:text-4xl md:text-5xl md:ml-32 max-sm:ml-10 font-extrabold text-white tracking-tight bg-gradient-to-r from-blue-400 via-indigo-500 to-green-400 bg-clip-text text-transparent">
-      Featured Projects
+      Projects
     </h1>
     <p className="text-gray-400 
     text-center text-xs 

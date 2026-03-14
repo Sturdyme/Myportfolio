@@ -1,6 +1,6 @@
 
-import { FaCss3Alt, FaGithub, FaHtml5, FaNodeJs, FaReact } from 'react-icons/fa';
-import { SiAmazonapigateway, SiDocker, SiExpress, SiFirebase, SiJavascript, SiLaravel, SiMongodb, SiNextdotjs, SiPhp, SiPostgresql, SiPostman, SiPython, SiTailwindcss, SiTypescript, SiVercel } from 'react-icons/si';
+import { FaCss3Alt, FaGithub, FaHtml5, FaNodeJs, FaPhp, FaReact } from 'react-icons/fa';
+import { SiAmazonapigateway, SiDocker, SiExpress, SiFirebase, SiJavascript, SiLaravel, SiMongodb, SiMysql, SiNextdotjs, SiPhp, SiPostgresql, SiPostman, SiPython, SiTailwindcss, SiTypescript, SiVercel } from 'react-icons/si';
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { VscVscode } from 'react-icons/vsc';
@@ -11,8 +11,12 @@ const skillSection = [
   { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" />, category: "Frontend" },
   { name: "TypeScript", icon: <SiTypescript className="text-blue-600" />, category: "Frontend" },
   { name: "Node.js", icon: <FaNodeJs className="text-green-600" />, category: "Backend" },
-  { name: "MongoDB", icon: <SiMongodb className="text-green-500" />, category: "Database" },
-  { name: "PHP", icon: <SiPhp className="text-sky-700" />, category: "Database" },
+
+    { name: "PHP", icon: <FaPhp className="text-green-600" />, category: "Backend" },
+  
+  { name: "FireBase", icon: <SiFirebase className="text-green-500" />, category: "Database" },
+  { name: "Postgresql", icon: <SiPostgresql className="text-green-500" />, category: "Database" },
+  { name: "MYSQL", icon: <SiMysql className="text-sky-700" />, category: "Database" },
   { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" />, category: "Frontend" },
   { name: "HTML5", icon: <FaHtml5 className="text-orange-500" />, category: "Frontend" },
   { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" />, category: "Frontend" },
@@ -23,6 +27,7 @@ const skillSection = [
    { name: "Figma", icon: <FiFigma className="text-sky-400" />, category: "Tools" },
    { name: "Postman", icon: <SiPostman className="text-sky-400" />, category: "Tools" },
   { name: "Laravel", icon: <SiLaravel className="text-sky-400" />, category: "Others" },
+
 
 ];
 
