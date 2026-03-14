@@ -44,7 +44,7 @@ const Sidebar = () => {
             className="text-white font-extrabold text-base sm:text-lg
             bg-gradient-to-b from-blue-400 via-indigo-500 to-blue-700
             bg-clip-text text-transparent
-            animate-float animate-glow"
+            animate-float "
             style={{
               writingMode: "vertical-rl",
               textOrientation: "upright",

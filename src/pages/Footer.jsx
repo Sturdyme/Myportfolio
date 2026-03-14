@@ -113,7 +113,7 @@ const Footer = () => {
 
     {/* ===== Copyright ===== */}
     <h5 className="text-center text-xs max-sm:ml-12 md:ml-32 sm:text-sm md:text-base text-gray-400">
-      &copy; 2025{" "}
+      &copy; 2026{" "}
       <span className="text-blue-400 font-semibold">
         Omowaye Emmanuel (Sturdyme)
       </span>

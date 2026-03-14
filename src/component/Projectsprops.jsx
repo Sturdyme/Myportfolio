@@ -20,7 +20,7 @@ const Projectsprops = ({ projects }) => {
      description="Ecommerce store"
      image={screenshot2}
      demoLink="https://ecommercestore-nu-three.vercel.app/"
-     techStack={["React", "Typescript", "PHP", "Tailwind CSS", "Javascript"]}
+     techStack={["React", "Typescript", "PHP", "Tailwind CSS", "Javascript", "Rest API"]}
      progress="In progress"
      />
 
